@@ -1,0 +1,339 @@
+  /*Propiedades GLOBALES*/
+  html {
+      box-sizing: border-box;
+      font-size: 62.5%;
+  } 
+
+  /* para que todos los elementos del html tenga esta caracteristica usamos el selector Universal * */
+
+  *, *::before, *::after{
+      box-sizing: inherit;
+  }
+
+  /*en otras palabras, los elementos van a heredar las propiedas del elemento html de border-box */
+
+  body {
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+  }
+
+  /* Encabezado de la Pagina*/
+
+  header {
+      background-color: black;
+      min-height: 80px; /*Estas especificando el alto de la parte del menu. Min tama;o es 80px*/
+      padding-top: 15px; /* relleno de la parte del menu */
+      overflow:hidden; /*esto va a evitar que se salga el contenido del contenedor, que salga escondido*/
+      border-bottom: #B7905A 3px solid; 
+  }
+
+  /* se agrega el Class al nav en HTML */
+  .contenedor-flex-1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%; /* Se acomoda automatica el logo mas a la derecha y todos los elementos del box solo ocupan el 80% */
+      margin: auto;
+  }
+
+  .contenedor-flex-1 ul {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+  }
+
+  .contenedor-flex-1 li {
+      list-style-type: none;
+      padding-right: 20px;
+  }
+
+  .contenedor-flex-1 li a {
+      text-decoration: none;
+      color: white;
+      font-family: Helvetica, Arial, sans-serif; /*Si el nombre de a fuente tiene 2 palabras, debes colocarla entre comillas */
+      font-size: 1.5em;
+      font-weight: bold; /*negrita*/
+  }
+
+  /*Banner*/
+
+  #banner {
+      min-height: 500px;
+      text-align: center;
+      font-family: Helvetica, Arial, sans-serif;
+      background-image: url('../img/banneroscuro.png');
+  }
+
+  #banner h1 {
+      font-size: 4.5em;
+      color: white;
+      font-weight: normal; /*estaba en negrita*/
+      margin-top: 0;
+      margin-bottom: 10px;
+      padding-top: 80px; /* estas propiedades tmb se pueden combinar */
+      transform: scale(1,1.1);
+  }
+
+  .ancho-contenido-banner {
+        width: 90%;
+        margin: auto; /* es mejor para no complicarnos*/
+        overflow: hidden; /* Porsiacaso */     
+  }
+
+  .ancho-contenido-banner p {
+      color: white;
+      font-size: 1.6em;
+  }
+
+  /* Cuota */
+.cuota {
+    background-color: black;
+    min-height: 120px;
+    padding: 10px;
+    color: white;
+    font-size: 1.8em;
+    font-style: italic;
+    font-family: Palatino, Georgia, serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.cuota span {
+    font-size: 1em;
+    padding-right: 20px;
+}
+
+/* Enlace Contactanos */
+
+.cuota a {
+    text-decoration: none;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #B7905A;
+    border-radius: 16px;
+    padding: 5px 12px 5px 12px;
+    color: white;
+    font-size: 1em;
+}
+
+/* Servicios */ 
+
+.contenedor-flex-2 {
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-flex-2 div{
+    text-align: center;
+    font-size: 1.6em;
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 20px;
+    margin: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 1.7em;
+    border-top: #B7905A 3px solid;
+    min-height: 80px;
+    padding-top: 25px;
+}
+
+
+/* PAG 2 NOSOTROS */
+
+.seccion-nosotros-1 {
+    text-align: center;
+    width: 90%;
+    background-color: #B7905A;
+    margin: 4% auto 4% auto; 
+    padding: 3% 0 3% 0; 
+}
+
+.seccion-nosotros-1 span {
+    color: white;
+    font-size: 25px;
+    font-family: Helvetica, Arial, sans-serif;
+    border: white 3px solid;
+    padding: 5px 10px 5px 10px;
+}
+
+.seccion-nosotros-2 {
+    text-align: center;
+    width: 90%;
+    margin: 4% auto 4% auto;
+}
+
+.seccion-nosotros-2 span {
+    font-size: 25px;
+    font-style: italic;
+    font-family: Palatino, Georgia, serif; 
+}
+
+.grid {
+    width: 90%;
+    margin: auto;
+    font-family: Helvetica, Arial, sans-serif;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-rows: auto;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: 
+    "valores equipo"
+    "mision equipo"
+    "vision equipo";
+} 
+
+/*Debes hacer referencia a los nombres*/
+
+.valores {
+    grid-area: valores;
+}
+
+.valores li{
+    list-style: none;
+    font-size: 1.6em;
+}
+
+.mision {
+    grid-area: mision;
+}
+
+.vision {
+    grid-area: vision;
+}
+
+.equipo {
+    grid-area: equipo;
+    background-image: url('../img/equipopag.png');
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.grid p{
+    padding: 10px;
+    font-size: 1.6em;
+}
+
+.grid h2{
+    font-size: 2.5em;
+}
+
+.grid h2::before {
+    content: "\2022";
+    color: #B7905A;
+    font-size: 32px;
+    padding-right: 10px;
+}
+
+.espacio-nosotros{
+    margin-bottom: 5%;
+}
+
+/* PAG 3 FORMULARIO */
+
+.Contenedor-formulario {
+    width: 40%;
+    margin: auto;
+    overflow: hidden;
+    background-color: black;
+    padding-top: 20px;
+} 
+
+.Contenedor-formulario h3{
+    color: white;
+    font-size: 1.6em;
+    font-weight: lighter;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+.formulario {
+    text-align: center;
+}
+
+.formulario > div{
+    padding-bottom: 20px;
+}
+
+.formulario input, textarea {
+    font-size: 1.5em;
+    width: 80%;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.boton{
+    color: white;
+    background-color: #B7905A;
+    border: none;
+    border-radius: 15px;
+    font-size: 2.0em;
+    cursor: pointer;
+    padding: 5px 50px;
+    margin-bottom: 20px;
+}
+
+.espacio-seccion{
+    min-height: 75vh;
+    margin-bottom: 15%;
+}
+
+/* Media Queries */
+
+/*Aqui colocamos las propiedades que cambiaran deacuerdo a las pantallas */
+
+@media(max-width:768px){
+
+    .contenedor-flex-1{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .contenedor-flex-2 {
+        flex-wrap: wrap;
+    }
+
+    .equipo {
+        display: none; /* Para que no se vea. tmb necesitamos cambiar Grid y la distribucion de las columnas */
+    }
+
+    /* quitamos font-family, margen y width porque quedan igual */
+    .grid {
+        display: grid;
+        grid-gap: 1em;
+        grid-template-rows: auto;
+        grid-template-columns: 100%; /* Solo queremos 1 columna */
+        grid-template-areas: /* Se cambian las filas */
+        "valores"
+        "mision"
+        "vision";
+    } 
+
+    .Contenedor-formulario{
+        width: 65%;
+    }
+    /*Luego agrandamos el textarea, yendo a html en textarea agregamos rows=5 y ya */
+
+    /* Para pantallas mas peue;as, cambiaremos el boton */
+
+    .boton {
+        font-size: 1.5em;
+        padding: 5px 30px;
+    }
+}
+
+
+/* PSEUDO-CLASES */
+/*  :hover cursor sobre el elemento
+    :link  cuando el enlace no ha sido visitado
+    :visited si el enlace ha sido visitado
+    :active si el elemento esta activado */
+
+.contenedor-flex-1 ul a:hover{
+    color: #B7905A;
+}
